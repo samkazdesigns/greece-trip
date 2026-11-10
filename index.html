@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Greece · Nov 11–16</title>
+<meta name="description" content="Day-by-day itinerary for Greece, Nov 11–16, 2026.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FAF6EC">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Greece">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Quicksand:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+
+  <header class="top">
+    <div class="brand">Greece <span>Nov 11–16</span></div>
+    <nav class="dots" id="dots" aria-label="Days"></nav>
+  </header>
+
+  <main class="map" id="map">
+    <div class="hero" id="hero"></div>
+    <div class="route" id="route"></div>
+    <div class="spacer" id="spacer"></div>
+  </main>
+
+  <section class="sheet" id="sheet" aria-label="Itinerary">
+    <div class="sheet-head" id="sheetHead">
+      <span class="grab" aria-hidden="true"></span>
+      <button class="arrow" id="prev" aria-label="Previous day">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg>
+      </button>
+      <button class="sheet-title" id="sheetTitle" aria-expanded="false" aria-controls="list">
+        <span class="eyebrow" id="sheetEyebrow"></span>
+        <span class="name" id="sheetName"></span>
+      </button>
+      <button class="arrow" id="next" aria-label="Next day">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg>
+      </button>
+    </div>
+    <div class="sheet-body" id="list"></div>
+  </section>
+
+</div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

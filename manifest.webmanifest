@@ -1,0 +1,9 @@
+{
+  "name": "Greece · Nov 11–16",
+  "short_name": "Greece",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#FAF6EC",
+  "theme_color": "#FAF6EC",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
