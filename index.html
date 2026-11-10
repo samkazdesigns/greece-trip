@@ -15,7 +15,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Quicksand:wght@400..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
 <div class="app">
@@ -25,11 +26,13 @@
     <nav class="dots" id="dots" aria-label="Days"></nav>
   </header>
 
-  <main class="map" id="map">
-    <div class="hero" id="hero"></div>
-    <div class="route" id="route"></div>
-    <div class="spacer" id="spacer"></div>
-  </main>
+  <div class="map" id="map" aria-label="Map of the day's route"></div>
+
+  <button class="fit" id="fit" aria-label="Show the whole day on the map">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+  </button>
+
+  <aside class="place-card" id="card" hidden></aside>
 
   <section class="sheet" id="sheet" aria-label="Itinerary">
     <div class="sheet-head" id="sheetHead">
@@ -49,7 +52,9 @@
   </section>
 
 </div>
-<script src="data.js"></script>
-<script src="app.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="data.js?v=2"></script>
+<script src="routes.js?v=2"></script>
+<script src="app.js?v=2"></script>
 </body>
 </html>
