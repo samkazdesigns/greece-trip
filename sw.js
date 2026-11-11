@@ -1,6 +1,6 @@
 // Network-first, falling back to the last copy seen — keeps the itinerary
 // readable with no signal in the mountains.
-const CACHE = "greece-v2";
+const CACHE = "greece-v3";
 const SHELL = ["./", "index.html", "styles.css", "data.js", "routes.js", "app.js", "icon.svg", "manifest.webmanifest"];
 
 self.addEventListener("install", (e) => {

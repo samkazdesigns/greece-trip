@@ -48,25 +48,22 @@ const HOTELS = {
     name: "Nefeli Hotel", place: "nefeli",
     address: "Aggelikis Xatzimichali 2, Athens 10558",
     phone: "+30 210 322 8044",
-    room: "Twin room · breakfast included",
+    room: "Breakfast included",
     times: "Check-in from 3:00 PM · check-out by 11:00 AM",
-    paid: "Paid in full (€68 per night)",
   },
   tholos: {
     name: "Tholos Hotel", place: "tholos",
     address: "31 Apollonos, Delphi 33054",
     phone: "+30 22650 82268",
-    room: "Standard double · breakfast included",
+    room: "Breakfast included",
     times: "Check-in 3:00–10:00 PM · check-out 8:00–11:00 AM",
-    paid: "€56.58 — charged to the card by the hotel",
   },
   doupiani: {
     name: "Doupiani House", place: "doupiani",
     address: "Kastraki, Kalabaka 42200",
     phone: "+30 24320 75326",
-    room: "Twin beds confirmed · breakfast included",
+    room: "Breakfast included",
     times: "Check-in 3:00 PM–midnight · check-out 7:00–11:00 AM",
-    paid: "Paid in full (€233 for 2 nights)",
   },
 };
 
@@ -80,8 +77,8 @@ const DAYS = [
       {
         stop: "ath", k: "flight", start: "16:00", end: "17:00", approx: true,
         items: [
-          { start: "16:00", title: "Land — Emirates EK 210 from Newark",
-            text: "Left Newark Tuesday at 11:45 PM; 9h 15m in the air.", booked: "Booked · Economy Saver" },
+          { start: "16:00", title: "Land — flight from Newark",
+            text: "Left Newark Tuesday at 11:45 PM; 9h 15m in the air." },
           { start: "16:00", end: "17:00", approx: true, title: "Passport control, bag, metro ticket",
             text: "EES biometric entry adds a few minutes at passport control. Collect the checked bag, then follow the “Trains” signs over the footbridge to the station. A metro ticket to the city is €9." },
         ],
@@ -99,14 +96,14 @@ const DAYS = [
         stop: "nefeli", k: "stay", start: "17:55", end: "21:00", approx: true,
         items: [
           { start: "17:55", approx: true, title: "Check in",
-            text: "Give the reservation name at the desk — <strong>Yury Kaz</strong>. The hotel has OK'd the early arrival.", booked: "Booked · early check-in OK'd" },
+            text: "Early arrival — the room should be ready." },
           { start: "18:00", end: "21:00", approx: true, title: "Rest",
             text: "Shower, nap, keep it light — the jet lag is 7 hours." },
-          { start: "19:15", title: "Yury lands", text: "British Airways BA 636 from London Heathrow." },
-          { start: "20:00", title: "Yury picks up the rental car",
-            text: "Alamo desk in the Arrivals Terminal, then a 40-minute drive in on the Attiki Odos motorway. Yury is the only driver until Thursday." },
-          { start: "20:50", approx: true, title: "Yury arrives and parks",
-            text: "Hotel or nearby garage, about €20–30 for the night. Twin beds were requested — the hotel will do its best on arrival." },
+          { start: "19:15", title: "London flight lands", text: "From London Heathrow." },
+          { start: "20:00", title: "Rental car pickup",
+            text: "Alamo desk in the Arrivals Terminal, then a 40-minute drive in on the Attiki Odos motorway. One driver until Thursday." },
+          { start: "20:50", approx: true, title: "Car arrives and parks",
+            text: "Hotel or nearby garage, about €20–30 for the night." },
         ],
       },
       { leg: "walk", title: "Walk to dinner", dur: "~5 min" },
@@ -138,7 +135,7 @@ const DAYS = [
         stop: "acropolis", k: "sight", start: "08:00", end: "11:30",
         items: [
           { start: "08:00", title: "Enter at opening",
-            text: "The entry slot is 8:00–9:00 AM and last entry is 8:40 AM. Tickets are the QR codes in the confirmation email.", booked: "Booked · 2 adults · 8:00–9:00 AM entry" },
+            text: "The entry slot is 8:00–9:00 AM and last entry is 8:40 AM. Have the tickets ready on your phone." },
           { start: "08:00", end: "11:30", title: "Parthenon → Erechtheion → Propylaea → Areopagus",
             text: "Self-guided with the free Rick Steves audio tour. Finish on Mars Hill and leave by the south slope, before the cruise crowds." },
         ],
@@ -155,15 +152,15 @@ const DAYS = [
       {
         stop: "nefeli", k: "car", start: "12:00", end: "12:10", approx: true,
         items: [
-          { start: "12:00", end: "12:10", approx: true, title: "Collect the bags and the car", text: "From the hotel garage or wherever Yury parked last night." },
+          { start: "12:00", end: "12:10", approx: true, title: "Collect the bags and the car", text: "From the hotel garage or wherever the car was parked last night." },
         ],
       },
       { leg: "car", title: "Drive to the Alamo branch", dur: "~10 min", text: "A short hop across the centre." },
       {
         stop: "enterprise", k: "car", start: "12:10", end: "12:35", approx: true,
         items: [
-          { start: "12:10", end: "12:35", approx: true, title: "Add Sam as a driver",
-            text: "Enterprise/Alamo Acropolis Station branch, 19 Andrea Syggrou Ave (open 9:00 AM–9:00 PM). Both of you there with the car; bring the US licence and passport. €4 a day plus VAT." },
+          { start: "12:10", end: "12:35", approx: true, title: "Add a second driver",
+            text: "Enterprise/Alamo Acropolis Station branch, 19 Andrea Syggrou Ave (open 9:00 AM–9:00 PM). Both drivers there with the car; bring licences and passports. €4 a day plus VAT." },
         ],
       },
       { leg: "car", title: "Drive Athens → Delphi", start: "12:35", end: "15:30", approx: true,
@@ -171,7 +168,7 @@ const DAYS = [
       {
         stop: "tholos", k: "stay", start: "15:30", end: "17:00", approx: true,
         items: [
-          { start: "15:30", approx: true, title: "Check in", text: "Luggage to the room.", booked: "Booked · 1 night" },
+          { start: "15:30", approx: true, title: "Check in", text: "Luggage to the room." },
           { start: "15:30", end: "17:00", approx: true, title: "Rest", text: "Nap if the travel day demands it." },
         ],
       },
@@ -234,7 +231,7 @@ const DAYS = [
         stop: "doupiani", k: "stay", start: "16:20", end: "16:25",
         items: [
           { start: "16:20", end: "16:25", title: "Check in",
-            text: "At the foot of the pillars. Two nights here — no checkout tomorrow. Free parking.", booked: "Booked · 2 nights · twin beds confirmed" },
+            text: "At the foot of the pillars. Two nights here — no checkout tomorrow. Free parking." },
         ],
       },
       { leg: "car", title: "Drive up to the viewpoint", dur: "~8 min" },
@@ -360,7 +357,7 @@ const DAYS = [
         stop: "nefeli", k: "stay", start: "16:40", end: "16:45", approx: true,
         items: [
           { start: "16:40", end: "16:45", approx: true, title: "Check in and park",
-            text: "Same hotel as the first night. Hotel garage or nearby, about €25.", booked: "Booked · 1 night" },
+            text: "Same hotel as the first night. Hotel garage or nearby, about €25." },
         ],
       },
       { leg: "walk", title: "Walk to Anafiotika", dur: "~6 min" },
@@ -419,7 +416,7 @@ const DAYS = [
       {
         stop: "alamo_ath", k: "car", start: "14:45", end: "15:10", approx: true,
         items: [
-          { start: "14:45", end: "15:10", approx: true, title: "Return the car", text: "Due back by 3:00 PM.", booked: "Booked · due 3:00 PM" },
+          { start: "14:45", end: "15:10", approx: true, title: "Return the car", text: "Due back by 3:00 PM." },
         ],
       },
       { leg: "walk", title: "Walk to the terminal", dur: "~5 min" },
@@ -427,8 +424,8 @@ const DAYS = [
         stop: "ath", k: "flight", start: "15:10", end: "17:10",
         items: [
           { start: "15:10", approx: true, title: "Check in and drop the bags", text: "Two hours before both departures." },
-          { start: "17:00", title: "Yury departs — British Airways BA 635", text: "To London Heathrow, landing 7:00 PM." },
-          { start: "17:10", title: "Sam departs — Emirates EK 209", text: "To Newark, landing 9:10 PM; 11 hours. Two checked bags included.", booked: "Booked · Economy Flex" },
+          { start: "17:00", title: "London flight departs", text: "To London Heathrow, landing 7:00 PM." },
+          { start: "17:10", title: "Newark flight departs", text: "To Newark, landing 9:10 PM; 11 hours." },
         ],
       },
     ],

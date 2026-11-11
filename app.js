@@ -256,8 +256,8 @@
     return `<div class="card">
       <div class="eyebrow">Tonight's stay · ${d.stay.night}</div>
       <h3>${h.name}</h3>
-      <p>${h.address}</p><p>${h.room}</p><p>${h.times}</p><p>${h.paid}</p>
-      <div class="chips"><span class="booked">Booked</span>${mapsLink(PLACES[h.place].q, "Open in Maps")}
+      <p>${h.address}</p><p>${h.room}</p><p>${h.times}</p>
+      <div class="chips">${mapsLink(PLACES[h.place].q, "Open in Maps")}
         <a class="maps" href="tel:${h.phone.replace(/\s/g, "")}">${h.phone}</a></div>
     </div>`;
   }
